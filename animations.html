@@ -1,0 +1,202 @@
+ <style>
+    .typing-effect {
+        font-family: 'Courier New', Courier, monospace;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid;
+        width: 0;
+        animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+    }
+
+    @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: black; }
+    }
+</style>
+
+<h1 class="typing-effect">Welcome to Kababjees!</h1> 
+ <style>
+    .fade-in {
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+</style>
+
+<div class="fade-in">
+    <h1>Welcome to Kababjees!</h1>
+</div> 
+ <style>
+    .slide-in {
+        transform: translateX(-100%);
+        animation: slideIn 2s forwards;
+    }
+
+    @keyframes slideIn {
+        from { transform: translateX(-100%); }
+        to { transform: translateX(0); }
+    }
+</style>
+
+<div class="slide-in">
+    <h2>Discover our Specialties</h2>
+</div> 
+<style>
+    .bounce {
+        display: inline-block;
+        animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-30px); }
+        60% { transform: translateY(-15px); }
+    }
+</style>
+
+<div class="bounce">
+    <h3>Order Now</h3>
+</div> 
+<style>
+    .bg-change {
+        padding: 20px;
+        background-color: lightblue;
+        transition: background-color 1s ease;
+    }
+
+    .bg-change:hover {
+        background-color: lightcoral;
+    }
+</style>
+
+<div class="bg-change">
+    <p>Hover over this section to change its background color.</p>
+</div> 
+ <style>
+    .zoom {
+        transition: transform 0.5s ease;
+    }
+
+    .zoom:hover {
+        transform: scale(1.1);
+    }
+</style>
+
+<img src="your-image.jpg" class="zoom" alt="Kababjees Restaurant" width="300px"> 
+<style>
+    .rotate {
+        transition: transform 0.5s ease;
+    }
+
+    .rotate:hover {
+        transform: rotate(360deg);
+    }
+</style>
+
+<div class="rotate">
+    <h3>Explore Menu</h3>
+</div> 
+<style>
+    .parallax {
+        background-image: url('background-image.jpg');
+        height: 500px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<div class="parallax"></div>
+<div>
+    <h2>Content on top of the parallax background</h2>
+</div> 
+<style>
+    .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 200px;
+        perspective: 1000px;
+    }
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+    .flip-card-back {
+        transform: rotateY(180deg);
+    }
+</style>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <h2>Front</h2>
+        </div>
+        <div class="flip-card-back">
+            <h2>Back</h2>
+        </div>
+    </div>
+</div> 
+<style>
+    .pulse {
+        display: inline-block;
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+</style>
+
+<h3 class="pulse">Limited Time Offer!</h3> 
+<style>
+    .slide-up {
+        opacity: 0;
+        transform: translateY(100px);
+        transition: transform 0.5s, opacity 0.5s;
+    }
+
+    .slide-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+
+<div class="slide-up">
+    <p>This content will slide up into view as you scroll down.</p>
+</div>
+
+<script>
+    const slideUpElement = document.querySelector('.slide-up');
+    window.addEventListener('scroll', () => {
+        const position = slideUpElement.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (position < windowHeight) {
+            slideUpElement.classList.add('visible');
+        }
+    });
+</script>
